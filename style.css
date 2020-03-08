@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: #333;
+  color: #fff;
+  /* line-height: 1.6;
+  height: 100vh; */
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  /* CSS Smooth Scroll */
+}
+
+#header-img {
+  position: fixed;
+  display: flex;
+  top: 0;
+  z-index: 2;
+  height: 42px;
+  width: 36px;
+  padding: 0.5rem;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#nav-bar ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+#nav-bar ul li {
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+#nav-bar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f4f4f4;
+}
+
+#nav-bar ul li a:hover {
+  color: skyblue;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+section h1 {
+  font-size: 4rem;
+}
+
+section p {
+  margin: 50px;
+  font-size: 1.2em;
+}
+
+/* Section Images */
+
+/* section#home {
+  background: url(SB_image2.png) no-repeat center center/cover;
+} */
+/* fade */
+
+section#home::after {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  background-image: url(SB_image2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(10px);
+  -webkit-filter: blur(10x);
+  transition: all 1000ms;
+}
+section#home:hover::after {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+
+section#home:hover .content {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 50%;
+  margin-top: 105px;
+  margin-left: -145px;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  transition: all 1000ms;
+}
+
+.content .logo {
+  height: 188px;
+  width: 288px;
+}
+
+.content .title {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.content .text {
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+/* end fade */
+
+section#about {
+  background: url(https://wallpapercave.com/wp/7NvodtH.jpg) no-repeat center
+    center/cover;
+}
+
+section#service {
+  background: url(http://www.otakuusamagazine.com/wp-content/uploads/2017/12/yamato5.jpg)
+    no-repeat center center/cover;
+}
+
+section#contact {
+  background: url(https://i.ytimg.com/vi/Fs7r9NUlAuI/maxresdefault.jpg)
+    no-repeat center center/cover;
+}
+
+/* Email */
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 50%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: none;
+  padding: 20px;
+}
